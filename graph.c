@@ -1,9 +1,5 @@
 #include <stdio.h>
 
-TEAM FLY PRESENTS
-
-205
-
 #define X_SIZE 40 /* size of array in X direction */
 #define Y_SIZE 60 /* size of array in Y direction */
 /*
