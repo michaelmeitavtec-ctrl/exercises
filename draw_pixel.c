@@ -10,6 +10,13 @@ byte_x = x / 8;
 bit_index = x % 8;
 bit = 0x80 >> bit_index;
 graphics[byte_x][byte_y] |= bit;
+
+This algorithm can be condensed into a single macro:
+#define set_bit(x, y) graphics[(x)/8][y] |= (0x80 >> ((x)%8))
+For example, to set the pixel at bit number 4,7, we need to set the fourth bit of byte
+0,7. Our macro would generate the statement:
+bit_array[0][7] |= (0x80 >> (4));
+
 */
 #include <stdint.h>
 
